@@ -3,5 +3,10 @@
 
 ### QuickStart
 ```
- ---
+docker run -d \
+--name frp \
+--network host \
+--env EXEC_COMMAND=frps -c /etc/frp/frps.ini \
+--read-only  -v /root/frp/frps.ini:/etc/frp/frps.ini \
+realforcez/frp
 ```
