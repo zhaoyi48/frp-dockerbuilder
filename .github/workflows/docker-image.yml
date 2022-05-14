@@ -69,10 +69,6 @@ jobs:
       - name: Run Download script
         run: sh download_update.sh
         
-#       - name: Run check script
-#         run: |
-#           ls xray
-#           ls builds/xray
         
       - name: Build and push
         uses: docker/build-push-action@v3
