@@ -1,1 +1,1 @@
-fatedier/frp:linux_amd64.tar.gz$:frp.zip:frp:gz
+fatedier/frp:linux_amd64.tar.gz$:frp.tar.gz:frp:gz
