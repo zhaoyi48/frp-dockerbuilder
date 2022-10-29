@@ -16,8 +16,8 @@ jobs:
 
   check:
     runs-on: ubuntu-latest
-#     outputs:
-#       checked: ${{ steps.ischeck.outputs.checked }}
+    outputs:
+      checked: ${{ steps.ischeck.outputs.checked }}
     steps:
       - uses: actions/checkout@v3
       
