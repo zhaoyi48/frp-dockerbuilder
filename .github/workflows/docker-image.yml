@@ -16,8 +16,8 @@ jobs:
 
   check:
     runs-on: ubuntu-latest
-    outputs:
-      checked: ${{ steps.ischeck.outputs.checked }}
+#     outputs:
+#       checked: ${{ steps.ischeck.outputs.checked }}
     steps:
       - uses: actions/checkout@v3
       
@@ -27,12 +27,12 @@ jobs:
         run: |
           IS_UPDATE=$(sh check_update.sh | grep 'Need Update'|wc -l)
           echo $IS_UPDATE
-          echo "::set-output name=checked::$IS_UPDATE"
+          echo "checked=$IS_UPDATE" >> $GITHUB_OUTPUT
         
       - name: Add & Commit
         # You may pin to the exact commit or the version.
         # uses: EndBug/add-and-commit@050a66787244b10a4874a2a5f682130263edc192
-        uses: EndBug/add-and-commit@v9.0.0
+        uses: EndBug/add-and-commit@v9.1.1
         with:
           # Arguments for the git add command
           add: current_release
